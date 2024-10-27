@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class CoffeMachine {
+        constructor(waterAmount) {
+          this.waterAmount = waterAmount;
+          this._temperature = 90;
+        }
+
+        set temperature(temperature) {
+          console.log("You are not Allowed to change the temperature");
+        }
+
+        get temperature() {
+          return this._temperature;
+        }
+      }
+
+      const coffee = new CoffeMachine(10);
+      console.log("Sebelum diubah: ", coffee.temperature);
+      coffee.temperature = 100;
+      console.log("Setelah diubah: ", coffee.temperature);
+    </script>
+  </body>
+</html>
